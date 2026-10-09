@@ -1,34 +1,72 @@
-# Arduino LCD Runner — Interrupts and Character Graphics
+# Arduino LCD Runner
 
-A small obstacle-avoidance game on a 16×2 character LCD. A button requests a jump while the terrain scrolls; collision ends the run and travelled distance drives the score.
+Mini-jeu de type « runner » sur écran LCD 16×2 avec Arduino : le personnage court automatiquement et doit éviter des obstacles en sautant grâce à un bouton.
 
-## Embedded implementation
+## Vue d'ensemble
 
-| Function | Role |
+Projet personnel (avril 2026) : adaptation et modification d'un jeu existant pour Arduino et LCD, dans l'esprit du « Chrome Dino ».
+
+> **Origine du code** : le programme part d'un code de jeu LCD pour Arduino diffusé dans un tutoriel tiers. Avant publication, citer précisément cette source ici, décrire les modifications apportées et vérifier que sa redistribution est permise.
+
+## Objectifs
+
+Comprendre et modifier un programme temps réel simple : affichage par caractères personnalisés, machine à états, entrée par interruption.
+
+## Matériel
+
+- Arduino Uno (ou compatible)
+- Écran LCD 16×2 (contrôleur HD44780)
+- Bouton poussoir
+
+## Logiciel
+
+IDE Arduino, C++. Bibliothèque et brochage : **à documenter** à partir du croquis.
+
+## Implémentation
+
+| Fonction | Rôle |
 |---|---|
-| `initializeGraphics()` | Loads custom character patterns |
-| `advanceTerrain()` | Shifts upper/lower terrain buffers |
-| `drawHero()` | Draws the character and checks collisions |
-| `loop()` | Advances the game state and display |
+| `initializeGraphics()` | Définit les sprites dans la mémoire de caractères du LCD |
+| `advanceTerrain()` | Fait défiler le décor |
+| `drawHero()` | Affiche le personnage, détecte les collisions, met à jour le score |
+| `loop()` | Logique principale du jeu |
 
-The implementation uses the HD44780-style controller's custom-character memory, limited to eight slots. Two line buffers represent terrain, and discrete hero states represent running/jumping phases. Button input uses an external interrupt.
+## Principes d'ingénierie
 
-## Hardware and setup
+- **Caractères personnalisés (CGRAM)** du LCD, limités à 8.
+- **Deux tampons** (ligne haute et ligne basse) décalés vers la gauche pour simuler le défilement.
+- **Obstacles pseudo-aléatoires.**
+- **Machine à états** pour le personnage : course, puis saut en plusieurs phases.
+- **Collision** par comparaison des tuiles.
+- **Bouton sur interruption externe INT0.**
 
-The original project uses an Arduino Uno-compatible board, a 16×2 LCD and a push-button. Review [`arduino_lcd_runner.ino`](arduino_lcd_runner.ino) for the exact library constructor and pin definitions; match those definitions to the wiring before upload.
+## Résultats
 
-Open the sketch in an Arduino-compatible IDE, select the board/port and compile before uploading.
+Le terrain défile, un appui déclenche un saut, une collision termine la partie et le score suit la distance parcourue. Photo ou vidéo du montage : **à ajouter**.
 
-## Timing and extension
+## Difficultés et limites
 
-The main loop uses `delay()`, so animation timing is blocking. This is an interactive embedded example rather than a measured hard real-time application. A continuation could introduce `millis()` scheduling, explicit button debouncing and a review of ISR-shared variables.
+- Animation discrète, sans physique réelle.
+- Boucle cadencée par `delay()`.
 
-To inspect interaction timing, follow the button interrupt, the shared jump request and the next display update. This separates input latency from the animation cadence.
+Améliorations envisagées : cadencement non bloquant avec `millis()`, difficulté progressive, sauvegarde du score en EEPROM, version I2C, buzzer.
 
-## Source attribution
+## Structure du dépôt
 
-This project adapts a third-party LCD-game example. The project work concerns game behaviour and embedded interaction; the original tutorial code remains third-party material, and its redistribution terms govern reuse.
+```
+arduino_lcd_runner.ino    Croquis (à exporter depuis le Google Doc en texte brut)
+```
+
+## Exécution
+
+Ouvrir le croquis dans l'IDE Arduino, sélectionner la carte, téléverser.
+
+## Compétences démontrées
+
+- Pilotage d'un LCD HD44780 et caractères personnalisés.
+- Interruptions externes sur AVR.
+- Machine à états et logique de jeu en C++ embarqué.
 
 ## Licence
 
-No project-wide licence has been defined.
+Aucune licence définie ; dépend de la licence du code d'origine.
