@@ -18,8 +18,8 @@ Review the infrared comparison using a threshold of 100 against the actual senso
 
 Inspect all motor commands and sensor modes in the graphical editor before transferring the program. Establish one ownership rule for motor output, then test sensor branches separately before combining them.
 
-The repository does not provide a text-source equivalent or a recorded demonstration.
+The native graphical project is the reference implementation; inspect its branches and motor blocks directly in the compatible EV3 editor.
 
 ## Validation and licence
 
-No robot test was rerun for this README update. The intended behaviour should be distinguished from verified runtime behaviour. No project-wide licence has been defined.
+Inspect sensor modes and motor arbitration first, then exercise each branch independently before combining the parallel paths. No project-wide licence has been defined.
