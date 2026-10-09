@@ -1,12 +1,38 @@
-# Robotique et Arduino
+# Robotics and Arduino — Embedded Interaction and Motor Control
 
-Petits projets de robotique et de microcontrôleur Arduino. Le projet principal de robotique, Farming Mars (Coupe de France 2024), a son propre dépôt.
+Three practical projects exploring sensor-driven behaviour, interrupt-based user input and actuator control.
 
-| Dossier | Contenu | Outils |
+## Project map
+
+| Project | Implementation | Technical focus |
 |---|---|---|
-| [`LEGO_EV3_Escape_the_Aliens/`](LEGO_EV3_Escape_the_Aliens/) | Robot qui évite les obstacles : deux tâches parallèles, deux capteurs infrarouges, arrêt par capteur tactile | LEGO Mindstorms EV3 |
-| [`Arduino_LCD_Runner/`](Arduino_LCD_Runner/) | Mini-jeu sur écran LCD 16×2 avec interruption | Arduino |
-| [`Essai_pont_H_LMD18200/`](Essai_pont_H_LMD18200/) | Essai de commande d'un moteur par le pont en H LMD18200 | Arduino, PWM |
+| [LCD runner](Arduino_LCD_Runner/) | Arduino sketch and 16×2 LCD | Custom characters, game state, button interrupts and collision detection |
+| [H-bridge experiment](Essai_pont_H_LMD18200/) | Arduino direction and PWM control | Motor direction, duty cycle and timed sequencing |
+| [EV3 obstacle avoidance](LEGO_EV3_Escape_the_Aliens/) | Native LEGO Mindstorms EV3 program | Parallel control paths, infrared sensing and touch-stop input |
 
-## Compétences
-Programmation de robot mobile, capteurs, interruptions, commande de moteur.
+The larger competition robot is documented separately in [Farming Mars](https://github.com/tedjelmoulksn-dotcom/Farming_Mars_CFR).
+
+## Embedded design perspective
+
+These exercises connect observable behaviour to low-level mechanisms: a button interrupt changes shared game state, custom LCD characters occupy controller memory, PWM controls average actuator drive, and independent robot-control loops can compete for the same motors.
+
+Each module README explains the archived implementation and its constraints. The Arduino sketches are individual programs rather than a shared firmware framework.
+
+## Getting started
+
+```bash
+git clone https://github.com/tedjelmoulksn-dotcom/Robotique_Arduino.git
+cd Robotique_Arduino
+```
+
+Open the selected `.ino` file in an Arduino-compatible environment and select the actual board. Check its pin assignments and peripheral wiring before upload. Open the `.ev3` file using a compatible legacy EV3 environment.
+
+## Validation and limitations
+
+The H-bridge sequence uses a fixed PWM value and delays; it is not a feedback speed controller. The EV3 archive contains parallel paths writing to the same motor pair, so arbitration and sensor thresholds need review. The LCD example illustrates interrupt interaction but has no measured worst-case execution time.
+
+No hardware tests were rerun during this documentation update.
+
+## Licence and attribution
+
+Existing source attribution remains in place. No project-wide licence has been defined.
