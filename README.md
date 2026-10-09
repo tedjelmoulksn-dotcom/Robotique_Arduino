@@ -29,9 +29,11 @@ Open the selected `.ino` file in an Arduino-compatible environment and select th
 
 ## Validation and limitations
 
-The H-bridge sequence uses a fixed PWM value and delays; it is not a feedback speed controller. The EV3 archive contains parallel paths writing to the same motor pair, so arbitration and sensor thresholds need review. The LCD example illustrates interrupt interaction but has no measured worst-case execution time.
+The three exercises illustrate different control models: a timed open-loop motor sequence, an interrupt-driven interactive display and concurrent sensor-driven motor commands. Evaluate each against its own state transitions, input handling and output ownership.
 
-No hardware tests were rerun during this documentation update.
+The H-bridge exercise uses a fixed-duty open-loop sequence. EV3 combines parallel sensor responses, requiring an explicit rule for motor ownership. The LCD program connects an interrupt-driven input to a delay-paced animation loop; its latency depends on when the main loop consumes the input request.
+
+Follow input events through the program state to the commanded output when checking each module.
 
 ## Licence and attribution
 
