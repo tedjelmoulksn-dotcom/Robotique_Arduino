@@ -1,13 +1,29 @@
-# Essai d'un pont en H LMD18200 avec Arduino
+# Arduino H-Bridge Experiment — Direction and PWM
 
-Croquis d'essai (octobre 2024) pour piloter un moteur à courant continu à travers un module à pont en H LMD18200.
+A motor-control exercise using an LMD18200 H-bridge and an Arduino sketch.
 
-- Broche 9 : entrée de direction (`DIR`).
-- Broche 10 : PWM de vitesse (`analogWrite`, 200 sur 255, soit environ 80 %).
-- Séquence : 5 s dans un sens, 5 s dans l'autre, arrêt 2 s (PWM à 0), puis reprise.
+## Control sequence
 
-## À documenter
+[`essai_lmd18200.ino`](essai_lmd18200.ino) uses pin 9 for direction and pin 10 for PWM. The fixed value `analogWrite(..., 200)` corresponds to approximately 78.4% of the 8-bit duty range.
 
-Moteur utilisé, tension d'alimentation, schéma de câblage et résultat de l'essai. Le fichier d'origine s'appelait `essaie_circuit_lmd1800T.txt` ; la référence exacte du module est à confirmer.
+The sequence applies one direction for five seconds, reverses for five seconds and stops for two seconds.
 
-Classé dans `To_Review` : un seul fichier, à rattacher à un projet de robotique si le contexte se confirme.
+## Embedded concepts
+
+Separate direction and PWM signals make actuator control explicit. Blocking delays implement a simple timed sequence; there is no encoder feedback, closed-loop speed regulation or acceleration profile.
+
+## Hardware integration
+
+Check the actual driver variant, supply, motor current, logic levels and common reference before connection. The source establishes control pins and a sequence, not a verified power-stage design or measured operating envelope.
+
+Open the sketch in an Arduino-compatible environment, select the actual board and check PWM capability on the selected pin.
+
+## Verification
+
+Observe direction, PWM duty/frequency and stop behaviour on the assembled circuit. Review switching behaviour before changing direction under load.
+
+No motor, current or waveform measurements were rerun for this documentation update.
+
+## Licence
+
+No project-wide licence has been defined.
