@@ -23,11 +23,11 @@ Open the sketch in an Arduino-compatible IDE, select the board/port and compile 
 
 The main loop uses `delay()`, so animation timing is blocking. This is an interactive embedded example rather than a measured hard real-time application. A continuation could introduce `millis()` scheduling, explicit button debouncing and a review of ISR-shared variables.
 
-No new hardware demonstration or execution-time measurement was performed for this README update.
+To inspect interaction timing, follow the button interrupt, the shared jump request and the next display update. This separates input latency from the animation cadence.
 
 ## Source attribution
 
-The sketch was adapted from a third-party LCD-game tutorial. Its exact original reference and redistribution terms have not yet been documented. Preserve this provenance issue when reusing the source; do not assume unrestricted licensing.
+This project adapts a third-party LCD-game example. The project work concerns game behaviour and embedded interaction; the original tutorial code remains third-party material, and its redistribution terms govern reuse.
 
 ## Licence
 
