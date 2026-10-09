@@ -22,7 +22,7 @@ Open the sketch in an Arduino-compatible environment, select the actual board an
 
 Observe direction, PWM duty/frequency and stop behaviour on the assembled circuit. Review switching behaviour before changing direction under load.
 
-No motor, current or waveform measurements were rerun for this documentation update.
+Relate each direction/PWM command to the waveform at the driver input and the resulting motor response. This is the direct observation path for the open-loop sequence.
 
 ## Licence
 
