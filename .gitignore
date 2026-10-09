@@ -1,0 +1,17 @@
+
+# Environnements et fichiers temporaires
+venv/
+.venv/
+node_modules/
+__pycache__/
+*.pyc
+*.asv
+*.m~
+slprj/
+*.slxc
+~$*
+*.swp
+*.swo
+.env
+.env.*
+!.env.example

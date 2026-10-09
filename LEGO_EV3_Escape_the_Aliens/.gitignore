@@ -1,0 +1,87 @@
+# Modèle commun de .gitignore pour les dépôts de ce portfolio.
+# Dans chaque dépôt : copier ce fichier sous le nom ".gitignore" et supprimer les blocs inutiles.
+
+# --- Documents à relire avant publication (ne pas pousser tant qu'ils ne sont pas validés)
+docs_a_valider/
+*NE_PAS_VERSIONNER*
+
+# --- Vidéos et archives lourdes
+*.mp4
+*.mov
+*.avi
+*.zip
+*.rar
+
+# --- C / C++
+*.o
+*.obj
+*.exe
+*.out
+*.elf
+*.map
+Debug/
+Release/
+x64/
+.vs/
+*.tlog
+
+# --- STM32CubeIDE
+.settings/
+*.launch
+
+# --- MPLAB (PIC)
+*.hex
+*.cof
+*.lst
+*.err
+*.mcs
+*.mcw
+
+# --- Arduino / PlatformIO
+build/
+.pio/
+*.ino.hex
+*.with_bootloader.*
+
+# --- Xilinx ISE / Vivado
+*.bit
+*.bgn
+*.bld
+*.ncd
+*.ngc
+*.ngd
+*.ngr
+*.pad
+*.par
+*.pcf
+*.syr
+*.twr
+*.twx
+*.xrpt
+*.xpi
+*.wdb
+*.gise
+*_summary.html
+_xmsgs/
+xst/
+isim/
+iseconfig/
+xlnx_auto_0_xdb/
+.Xil/
+
+# --- MATLAB / Simulink
+*.asv
+*.slxc
+slprj/
+
+# --- Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# --- Fichiers système et de verrouillage
+.DS_Store
+Thumbs.db
+~$*
+.~lock.*
