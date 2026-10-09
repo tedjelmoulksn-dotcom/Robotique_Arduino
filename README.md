@@ -1,6 +1,10 @@
 # Robotics and Arduino — Embedded Interaction and Motor Control
 
-Three practical projects exploring sensor-driven behaviour, interrupt-based user input and actuator control.
+Arduino and LEGO robotics exercises in display interaction, sensing and motor control.
+
+![Independent Arduino and EV3 exercises.](assets/project-overview.svg)
+
+*Independent Arduino and EV3 exercises.*
 
 ## Project map
 
