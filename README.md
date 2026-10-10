@@ -2,6 +2,10 @@
 
 A collection of embedded experiments covering sensors, motor drivers, LCD interaction and LEGO EV3 programming.
 
+![Robotique Arduino project overview](assets/project-overview.svg)
+
+*Technical study overview based on the available repository material.*
+
 ## Project guide
 
 | Folder | Contents |

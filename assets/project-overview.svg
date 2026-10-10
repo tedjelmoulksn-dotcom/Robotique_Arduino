@@ -1,1 +1,29 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="960" height="478" viewBox="0 0 960 478" role="img" aria-labelledby="title desc"><title id="title">Embedded interaction and motor control</title><desc id="desc">Independent Arduino and EV3 exercises. LCD runner: Button interrupt · character graphics. Game behaviour: Scrolling buffers · jump states · collision. H-bridge sequence: Direction pin · 8-bit PWM command. EV3 control: IR inputs · touch stop · parallel motor paths</desc><defs><marker id="arrow" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0 0L8 4L0 8Z" fill="#536d83"/></marker></defs><rect width="960" height="478" rx="18" fill="#f4f7fb"/><text x="48" y="48" font-family="sans-serif" font-size="26" font-weight="700" fill="#132b42">Embedded interaction and motor control</text><text x="48" y="78" font-family="sans-serif" font-size="16" fill="#52677b">Independent Arduino and EV3 exercises</text><path d="M456 173 L499 173" fill="none" stroke="#536d83" stroke-width="2" marker-end="url(#arrow)"/><rect x="48" y="112" width="408" height="122" rx="12" fill="#ffffff" stroke="#c8d6e3"/><rect x="48" y="112" width="6" height="122" rx="3" fill="#176b9c"/><text x="70" y="146" font-family="sans-serif" font-size="19" font-weight="700" fill="#17354f">LCD runner</text><text x="70" y="177" font-family="sans-serif" font-size="15" fill="#475f74">Button interrupt · character graphics</text><rect x="504" y="112" width="408" height="122" rx="12" fill="#ffffff" stroke="#c8d6e3"/><rect x="504" y="112" width="6" height="122" rx="3" fill="#176b9c"/><text x="526" y="146" font-family="sans-serif" font-size="19" font-weight="700" fill="#17354f">Game behaviour</text><text x="526" y="177" font-family="sans-serif" font-size="15" fill="#475f74">Scrolling buffers · jump states · collision</text><rect x="48" y="300" width="408" height="122" rx="12" fill="#ffffff" stroke="#c8d6e3"/><rect x="48" y="300" width="6" height="122" rx="3" fill="#176b9c"/><text x="70" y="334" font-family="sans-serif" font-size="19" font-weight="700" fill="#17354f">H-bridge sequence</text><text x="70" y="365" font-family="sans-serif" font-size="15" fill="#475f74">Direction pin · 8-bit PWM command</text><rect x="504" y="300" width="408" height="122" rx="12" fill="#ffffff" stroke="#c8d6e3"/><rect x="504" y="300" width="6" height="122" rx="3" fill="#176b9c"/><text x="526" y="334" font-family="sans-serif" font-size="19" font-weight="700" fill="#17354f">EV3 control</text><text x="526" y="365" font-family="sans-serif" font-size="15" fill="#475f74">IR inputs · touch stop · parallel motor</text><text x="526" y="388" font-family="sans-serif" font-size="15" fill="#475f74">paths</text></svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="1100" height="460" viewBox="0 0 1100 460" role="img" aria-labelledby="title desc">
+<title id="title">Arduino and EV3 experiments</title>
+<desc id="desc">Independent sensor, motor-driver and native LEGO projects. Infrared and ultrasound: Separate Arduino sensor sketches, Review each sketch for its pin assignments; H-bridge motor control: Direction and PWM experiment, LMD18200 driver study; Native EV3 projects: Escape the Aliens project, Separate EV3 brick test; RFID dependency: MFRC522 library and example sketches, Bundled upstream material; original license retained</desc>
+<rect width="1100" height="460" rx="18" fill="#f4f7fb"/>
+<g font-family="Arial, Helvetica, sans-serif">
+<text x="34" y="48" fill="#172b3a" font-size="29" font-weight="700">Arduino and EV3 experiments</text>
+<text x="34" y="77" fill="#526576" font-size="17">Independent sensor, motor-driver and native LEGO projects</text>
+<rect x="34" y="104" width="505" height="119" rx="11" fill="white" stroke="#d8e2eb"/>
+<path d="M35 114 V213" stroke="#287b8e" stroke-width="4"/>
+<text x="54" y="136" fill="#183345" font-size="20" font-weight="700">Infrared and ultrasound</text>
+<text x="54" y="163" fill="#465e70" font-size="17">Separate Arduino sensor sketches</text>
+<text x="54" y="186" fill="#465e70" font-size="17">Review each sketch for its pin assignments</text>
+<rect x="559" y="104" width="505" height="119" rx="11" fill="white" stroke="#d8e2eb"/>
+<path d="M560 114 V213" stroke="#287b8e" stroke-width="4"/>
+<text x="579" y="136" fill="#183345" font-size="20" font-weight="700">H-bridge motor control</text>
+<text x="579" y="163" fill="#465e70" font-size="17">Direction and PWM experiment</text>
+<text x="579" y="186" fill="#465e70" font-size="17">LMD18200 driver study</text>
+<rect x="34" y="243" width="505" height="119" rx="11" fill="white" stroke="#d8e2eb"/>
+<path d="M35 253 V352" stroke="#287b8e" stroke-width="4"/>
+<text x="54" y="275" fill="#183345" font-size="20" font-weight="700">Native EV3 projects</text>
+<text x="54" y="302" fill="#465e70" font-size="17">Escape the Aliens project</text>
+<text x="54" y="325" fill="#465e70" font-size="17">Separate EV3 brick test</text>
+<rect x="559" y="243" width="505" height="119" rx="11" fill="white" stroke="#d8e2eb"/>
+<path d="M560 253 V352" stroke="#287b8e" stroke-width="4"/>
+<text x="579" y="275" fill="#183345" font-size="20" font-weight="700">RFID dependency</text>
+<text x="579" y="302" fill="#465e70" font-size="17">MFRC522 library and example sketches</text>
+<text x="579" y="325" fill="#465e70" font-size="17">Bundled upstream material; original license retained</text>
+<text x="34" y="420" fill="#526576" font-size="16">Experiment map; these modules do not form a single integrated robot.</text>
+</g></svg>
